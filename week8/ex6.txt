@@ -1,0 +1,3 @@
+8KB = 2^13, then we need 13 bits offset
+Our address is 2^16
+2^(16-13) = 2^3 = 8 entries 
