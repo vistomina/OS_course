@@ -1,0 +1,18 @@
+1 step: create file "file.txt" in week01:
+/home/mobaxterm/week01  touch file.txt
+
+2 step: create a link to this file from week10:
+/home/mobaxterm/week10  link ../week01/file.txt _ex2.txt
+
+3 step: get i-node from file.txt::
+/home/mobaxterm/week10  ls -i ../week01/file.txt
+7881299347906996 ../week01/file.txt
+
+4 step: trace all links to file.txt:
+find .. -inum 7881299347906996
+../week01/file.txt
+../week10/_ex2.txt
+
+5 step: remove all links from file.txt:
+find .. -inum 7881299347906996 -exec rm {} \;
+

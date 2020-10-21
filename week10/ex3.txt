@@ -1,0 +1,16 @@
+1 step: create file "_ex3.txt":
+/home/mobaxterm/week10  touch _ex3.txt
+
+2 step: remove execute permissions for everybody:
+/home/mobaxterm/week10  chmod -x _ex3.txt
+
+3 step: grant all permissions to owner:
+/home/mobaxterm/week10  chmod u=rwx _ex3.txt
+
+4 step: grant all permissions to others: 
+/home/mobaxterm/week10  chmod o=rwx _ex3.txt
+
+5 step: grant permissions to group same as owner's:
+/home/mobaxterm/week10  chmod g=u _ex3.txt
+
+
