@@ -1,0 +1,6 @@
+1) Deadlock recovery: It starts to deal with problem only after its occurrence. It can kill some processes which are in a deadlock state. 
+By the way it requires to have processes which can be restarted without any bad effects and which don't require specific states.
+
+2) Deadlock prevention: It's time consuming, because it checks each request for a deadlock. It can't be used in real-time systems.
+
+3) Deadlock avoidance: It makes deadlock impossible, but it becomes complicated to run the program in system because of extra constraints. 
