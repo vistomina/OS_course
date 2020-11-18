@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d(TAG , "Task to add: " + task ) ;
                             }
                         })
-                        .setNegativeButton ("Cancel" , null )
+                        .setNegativeButton ("Cancel", null)
                         .create() ;
                 dialog.show() ;
                 return true ;
@@ -66,17 +66,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void addItem ( String itemText ){
-        taskList.add ( itemText );
-        mAdapter . notifyDataSetChanged () ;
+    private void addItem (String itemText){
+        taskList.add (itemText);
+        mAdapter.notifyDataSetChanged() ;
     }
 
     private void removeItem ( String itemText ) {
-        taskList.remove ( itemText );
-        mAdapter.notifyDataSetChanged () ;
+        taskList.remove (itemText);
+        mAdapter.notifyDataSetChanged() ;
     }
 
-    public void deleteTask(View view) {
+    public void deleteTask(View view){
         View parent = (View) view.getParent();
         TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
         String task = String.valueOf(taskTextView.getText());
